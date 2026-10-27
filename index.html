@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#101a30">
+    <meta
+      name="description"
+      content="Tech Málaga: una agenda de demostración para descubrir eventos de tecnología en Málaga."
+    >
+    <title>Tech Málaga — tecnología que conecta</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="#inicio" aria-label="Tech Málaga, inicio">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M12 21s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z"></path>
+              <circle cx="12" cy="9" r="2.4"></circle>
+              <path d="M18 5h3m-1.5-1.5V6.5"></path>
+            </svg>
+          </span>
+          <span class="brand-name">Tech <span class="brand-accent">Málaga</span></span>
+        </a>
+        <nav class="main-nav" aria-label="Navegación principal">
+          <a href="#agenda">Agenda</a>
+          <a href="#comunidad">La comunidad</a>
+        </nav>
+        <button class="theme-toggle" type="button" aria-label="Cambiar al tema claro" aria-pressed="false">
+          <svg class="theme-icon icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M20.2 15.1A8.5 8.5 0 0 1 8.9 3.8 8.6 8.6 0 1 0 20.2 15.1Z"></path>
+          </svg>
+          <svg class="theme-icon icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"></path>
+          </svg>
+          <span class="theme-label">Tema</span>
+        </button>
+      </div>
+    </header>
+
+    <main id="contenido">
+      <section class="hero page-width" id="inicio" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="status-dot"></span> Conectando el ecosistema tech local</p>
+          <h1 id="hero-title">La tecnología<br>también <span>pasa aquí.</span></h1>
+          <p class="hero-intro">Tu punto de encuentro con las ideas, las personas y los eventos que mueven la tecnología en Málaga.</p>
+          <a class="button button-primary" href="#agenda">
+            Explorar la agenda <span aria-hidden="true">↘</span>
+          </a>
+          <p class="hero-note"><span aria-hidden="true">✳</span> Un calendario abierto para una comunidad que no para de crecer.</p>
+        </div>
+        <article class="featured-card" aria-labelledby="featured-title">
+          <div class="featured-topline">
+            <span class="pill pill-violet">EVENTO DESTACADO</span>
+            <span class="demo-label">DEMO</span>
+          </div>
+          <div class="featured-art" aria-hidden="true">
+            <span class="orbit orbit-one"></span>
+            <span class="orbit orbit-two"></span>
+            <span class="orbit-core">&lt;AI/&gt;</span>
+            <span class="art-caption">MÁLAGA · 2026</span>
+          </div>
+          <div class="featured-details">
+            <p class="event-category">Inteligencia artificial <span>·</span> Comunidad</p>
+            <h2 id="featured-title">Málaga AI<br>Meetup</h2>
+            <div class="event-meta">
+              <span><span aria-hidden="true">▦</span> 12 nov 2026 · 18:30</span>
+              <span><span aria-hidden="true">⌖</span> Soho, Málaga</span>
+            </div>
+            <a class="text-link demo-registration" href="#inscripcion" data-event-title="Málaga AI Meetup">Ver inscripción <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+        <div class="hero-decoration" aria-hidden="true">01001<br>10110<br>00101</div>
+      </section>
+
+      <section class="agenda-section" id="agenda" aria-labelledby="agenda-title">
+        <div class="page-width">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">GUARDA LA FECHA <span class="heading-line"></span></p>
+              <h2 id="agenda-title">Lo que viene<span class="heading-period">.</span></h2>
+              <p class="section-description">Ideas nuevas, gente interesante y un sitio para encontrarnos.</p>
+            </div>
+            <div class="demo-notice"><span aria-hidden="true">ⓘ</span> Agenda de ejemplo · eventos y fechas ficticios</div>
+          </div>
+
+          <div class="agenda-layout">
+            <aside class="calendar-panel" aria-label="Calendario de noviembre de 2026">
+              <div class="calendar-header">
+                <h3 id="calendar-month">noviembre <span>2026</span></h3>
+                <div class="calendar-controls">
+                  <button type="button" class="calendar-arrow" id="previous-month" aria-label="Mes anterior">‹</button>
+                  <button type="button" class="calendar-arrow" id="next-month" aria-label="Mes siguiente">›</button>
+                </div>
+              </div>
+              <div class="calendar-grid calendar-weekdays" aria-hidden="true">
+                <span>lu</span><span>ma</span><span>mi</span><span>ju</span><span>vi</span><span>sá</span><span>do</span>
+              </div>
+              <div class="calendar-grid calendar-days" id="calendar-days" role="group" aria-label="Días del mes"></div>
+              <div class="calendar-legend"><span class="legend-dot"></span> Hay eventos</div>
+              <button type="button" class="clear-date" id="clear-date">Ver todos los días <span aria-hidden="true">↗</span></button>
+            </aside>
+
+            <div class="events-panel">
+              <div class="filters-row">
+                <div class="filter-list" role="group" aria-label="Filtrar eventos por categoría">
+                  <button class="filter-chip is-active" type="button" data-category="Todas" aria-pressed="true">Todo <span>05</span></button>
+                  <button class="filter-chip" type="button" data-category="Desarrollo" aria-pressed="false">Desarrollo</button>
+                  <button class="filter-chip" type="button" data-category="Inteligencia artificial" aria-pressed="false">IA</button>
+                  <button class="filter-chip" type="button" data-category="Diseño" aria-pressed="false">Diseño</button>
+                  <button class="filter-chip" type="button" data-category="Startups" aria-pressed="false">Startups</button>
+                </div>
+                <p class="results-count" id="results-count" aria-live="polite"></p>
+              </div>
+              <div class="event-list" id="event-list" aria-live="polite"></div>
+              <p class="empty-state" id="empty-state" hidden>No hay eventos de ejemplo para este día y categoría. Prueba otro filtro.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="community-section page-width" id="comunidad" aria-labelledby="community-title">
+        <div class="community-icon" aria-hidden="true">✳</div>
+        <div>
+          <p class="eyebrow">HECHO PARA COMPARTIR</p>
+          <h2 id="community-title">El siguiente evento<br>podría ser el tuyo.</h2>
+        </div>
+        <p>Tech Málaga es un concepto de agenda comunitaria. Los eventos de esta página son demostraciones, no convocatorias reales.</p>
+        <a class="button button-secondary" href="#agenda">Volver a la agenda <span aria-hidden="true">↑</span></a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="page-width footer-inner">
+        <a class="brand footer-brand" href="#inicio" aria-label="Tech Málaga, inicio">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M12 21s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z"></path>
+              <circle cx="12" cy="9" r="2.4"></circle>
+              <path d="M18 5h3m-1.5-1.5V6.5"></path>
+            </svg>
+          </span>
+          <span class="brand-name">Tech <span class="brand-accent">Málaga</span></span>
+        </a>
+        <p>Una idea para la comunidad tecnológica de Málaga <span aria-hidden="true">✳</span></p>
+        <span class="footer-code">HECHO CON CURIOSIDAD_</span>
+      </div>
+    </footer>
+
+    <dialog class="registration-dialog" id="registration-dialog" aria-labelledby="dialog-title">
+      <form method="dialog">
+        <button class="dialog-close" aria-label="Cerrar">×</button>
+      </form>
+      <span class="dialog-icon" aria-hidden="true">✳</span>
+      <p class="eyebrow">AVISO DE DEMOSTRACIÓN</p>
+      <h2 id="dialog-title">Inscripción no disponible</h2>
+      <p id="dialog-message">Este evento es un ejemplo de diseño. No existe una inscripción real.</p>
+      <button class="button button-primary dialog-ok" type="button">Entendido</button>
+    </dialog>
+  </body>
+</html>
